@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import MovieTicket from './components/ClassBasedComponent';
+import FunctionalBasedComponent from './components/FunctionalBasedComponent';
+import TitleComponent from './components/TitleComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TitleComponent title="State & Props Examples" />
+      
+      {/* Title Component for class component */}
+      <TitleComponent title="Class Component Using Example" />
+      {/* Class component using state & props */}
+      <MovieTicket />      
+      
+      {/* Title Component for functional component */}
+      <TitleComponent title="Functional Component Example" />
+      {/* Functional component using state & props */}
+      <FunctionalBasedComponent />
     </div>
   );
 }
